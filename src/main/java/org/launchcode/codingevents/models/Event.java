@@ -2,6 +2,7 @@ package org.launchcode.codingevents.models;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 import java.util.Objects;
 
@@ -24,6 +25,11 @@ public class Event {
     @Email(message = "Invalid email. Try again.")
     private String contactEmail;
 
+    @NotBlank(message="Location cannot be left blank.")
+    private String location;
+    @Positive(message="Number of attendees must be one or more.")
+    private int numberOfAttendees;
+
     public Event(String name, String description, String contactEmail) {
         this();
         this.name = name;
@@ -35,6 +41,7 @@ public class Event {
         this.id = nextId;
         nextId++;
     }
+
 
     public String getName() {
         return name;
