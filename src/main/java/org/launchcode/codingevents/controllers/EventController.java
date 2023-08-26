@@ -18,7 +18,7 @@ import javax.validation.Valid;
 @RequestMapping("events")
 public class EventController {
 
-    @Autowired
+    @Autowired // tells Spring to inject an instance of the EventRepository class into this class
     private EventRepository eventRepository;
 
     @GetMapping
