@@ -14,9 +14,9 @@ import javax.validation.Valid;
 /**
  * Created by Chris Bay
  */
-@Controller
-@RequestMapping("events")
-public class EventController {
+    @Controller
+    @RequestMapping("events")
+    public class EventController {
 
     @Autowired // tells Spring to inject an instance of the EventRepository class into this class
     private EventRepository eventRepository;
